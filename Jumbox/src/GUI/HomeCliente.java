@@ -10,6 +10,7 @@ public class HomeCliente extends JFrame {
 	private Usuario clienteLogueado;
 
 	public HomeCliente(Usuario cliente) {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(HomeCliente.class.getResource("/img/super.png")));
 		this.clienteLogueado = cliente;
 
 		setTitle("Jumbox - Portal de Cliente: " + cliente.getUsername());
@@ -20,8 +21,8 @@ public class HomeCliente extends JFrame {
 		JPanel panel = new JPanel(new GridLayout(4, 1, 15, 15));
 		panel.setBorder(new EmptyBorder(30, 60, 30, 60));
 
-		JButton btnVerInventario = new JButton("Ver Catálogo de Productos");
-		JButton btnCrearPedido = new JButton("Crear un Nuevo Pedido");
+		JButton btnVerInventario = new JButton("Catálogo de Productos");
+		JButton btnCrearPedido = new JButton("Nuevo Pedido");
 		JButton btnVerMisPedidos = new JButton("Ver Mis Pedidos");
 		JButton btnCerrarSesion = new JButton("Cerrar Sesión");
 
@@ -30,7 +31,7 @@ public class HomeCliente extends JFrame {
 		panel.add(btnVerMisPedidos);
 		panel.add(btnCerrarSesion);
 
-		add(panel);
+		getContentPane().add(panel);
 
 		btnVerInventario.addActionListener(e -> {
 			new TablaProductosCliente(clienteLogueado).setVisible(true);

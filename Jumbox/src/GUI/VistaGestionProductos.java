@@ -107,7 +107,7 @@ public class VistaGestionProductos extends JFrame {
 		int idProducto = (int) model.getValueAt(selectedRow, 0);
 		String nombreProducto = (String) model.getValueAt(selectedRow, 1);
 
-		String precioStr = JOptionPane.showInputDialog(this, "Ingrese el NUEVO precio para '" + nombreProducto + "':");
+		String precioStr = JOptionPane.showInputDialog(this, "Ingrese el nuevo precio para '" + nombreProducto + "':");
 		if (precioStr == null)
 			return false;
 

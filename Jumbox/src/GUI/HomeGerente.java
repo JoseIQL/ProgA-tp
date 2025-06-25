@@ -10,6 +10,7 @@ public class HomeGerente extends JFrame {
 	private Usuario gerenteLogueado;
 
 	public HomeGerente(Usuario gerente) {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(HomeGerente.class.getResource("/img/super.png")));
 		this.gerenteLogueado = gerente;
 
 		setTitle("Jumbox - Panel de Gerente: " + gerente.getUsername());
@@ -20,8 +21,8 @@ public class HomeGerente extends JFrame {
 		JPanel panel = new JPanel(new GridLayout(6, 1, 15, 15));
 		panel.setBorder(new EmptyBorder(30, 60, 30, 60));
 
-		JButton btnVerCatalogo = new JButton("Ver Catálogo de Productos");
-		JButton btnCrearPedido = new JButton("Crear un Nuevo Pedido");
+		JButton btnVerCatalogo = new JButton("Catálogo de Productos");
+		JButton btnCrearPedido = new JButton("Nuevo Pedido");
 		JButton btnVerMisPedidos = new JButton("Ver Mis Pedidos");
 		JButton btnGestionarProductos = new JButton("Gestionar Productos");
 		JButton btnGestionarUsuarios = new JButton("Gestionar Usuarios");
@@ -34,7 +35,7 @@ public class HomeGerente extends JFrame {
 		panel.add(btnGestionarUsuarios);
 		panel.add(btnCerrarSesion);
 
-		add(panel);
+		getContentPane().add(panel);
 
 		btnVerCatalogo.addActionListener(e -> {
 			new TablaProductosCliente(gerenteLogueado).setVisible(true);

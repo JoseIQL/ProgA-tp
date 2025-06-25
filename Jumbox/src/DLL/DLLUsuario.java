@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 
 import BLL.Usuario;
 import repository.Encriptador;
-//aca
+
 public class DLLUsuario {
 
 	private static final Connection con = Conexion.getInstance().getConnection();

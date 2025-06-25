@@ -12,6 +12,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JButton;
 import javax.swing.ImageIcon;
 import javax.swing.JPasswordField;
+import java.awt.Toolkit;
 
 public class PantallaDividida extends JFrame {
 
@@ -43,6 +44,7 @@ public class PantallaDividida extends JFrame {
 	 * Create the frame.
 	 */
 	public PantallaDividida() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(PantallaDividida.class.getResource("/img/super.png")));
 		setTitle("Jumbox - Acceso al Sistema");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 700, 450);
@@ -59,28 +61,28 @@ public class PantallaDividida extends JFrame {
 		tabbedPane.addTab("Login", null, panelLogin, null);
 
 		JLabel lblEmailLogin = new JLabel("Email:");
-		lblEmailLogin.setBounds(40, 50, 80, 25);
+		lblEmailLogin.setBounds(50, 75, 80, 25);
 		panelLogin.add(lblEmailLogin);
 
 		loginEmailField = new JTextField();
-		loginEmailField.setBounds(130, 50, 200, 25);
+		loginEmailField.setBounds(50, 111, 200, 25);
 		panelLogin.add(loginEmailField);
 
 		JLabel lblPassLogin = new JLabel("Contraseña:");
-		lblPassLogin.setBounds(40, 100, 80, 25);
+		lblPassLogin.setBounds(50, 147, 80, 25);
 		panelLogin.add(lblPassLogin);
 
 		loginPasswordField = new JPasswordField();
-		loginPasswordField.setBounds(130, 100, 200, 25);
+		loginPasswordField.setBounds(50, 183, 200, 25);
 		panelLogin.add(loginPasswordField);
 
 		btnLogin = new JButton("Iniciar Sesión");
-		btnLogin.setBounds(150, 160, 120, 40);
+		btnLogin.setBounds(89, 229, 120, 40);
 		panelLogin.add(btnLogin);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon(PantallaDividida.class.getResource("/img/super.png")));
-		lblNewLabel.setBounds(400, 50, 225, 225);
+		lblNewLabel.setIcon(new ImageIcon(PantallaDividida.class.getResource("/img/t (1).png")));
+		lblNewLabel.setBounds(340, 0, 329, 373);
 		panelLogin.add(lblNewLabel);
 
 		JPanel panelRegister = new JPanel(null);
@@ -88,36 +90,36 @@ public class PantallaDividida extends JFrame {
 		panelRegister.setLayout(null);
 
 		JLabel lblUserReg = new JLabel("Nombre:");
-		lblUserReg.setBounds(40, 50, 80, 25);
+		lblUserReg.setBounds(50, 60, 80, 25);
 		panelRegister.add(lblUserReg);
 
 		registerUsernameField = new JTextField();
-		registerUsernameField.setBounds(130, 50, 200, 25);
+		registerUsernameField.setBounds(50, 96, 200, 25);
 		panelRegister.add(registerUsernameField);
 
 		JLabel lblEmailReg = new JLabel("Email:");
-		lblEmailReg.setBounds(40, 100, 80, 25);
+		lblEmailReg.setBounds(50, 132, 80, 25);
 		panelRegister.add(lblEmailReg);
 
 		registerEmailField = new JTextField();
-		registerEmailField.setBounds(130, 100, 200, 25);
+		registerEmailField.setBounds(50, 168, 200, 25);
 		panelRegister.add(registerEmailField);
 
 		JLabel lblPassReg = new JLabel("Contraseña:");
-		lblPassReg.setBounds(40, 150, 80, 25);
+		lblPassReg.setBounds(50, 204, 80, 25);
 		panelRegister.add(lblPassReg);
 
 		registerPasswordField = new JPasswordField();
-		registerPasswordField.setBounds(130, 150, 200, 25);
+		registerPasswordField.setBounds(50, 240, 200, 25);
 		panelRegister.add(registerPasswordField);
 
 		btnRegister = new JButton("Registrarse");
-		btnRegister.setBounds(150, 210, 120, 40);
+		btnRegister.setBounds(89, 288, 120, 40);
 		panelRegister.add(btnRegister);
 		
 		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon(PantallaDividida.class.getResource("/img/super.png")));
-		lblNewLabel_1.setBounds(400, 50, 225, 225);
+		lblNewLabel_1.setIcon(new ImageIcon(PantallaDividida.class.getResource("/img/t (1).png")));
+		lblNewLabel_1.setBounds(340, 0, 329, 373);
 		panelRegister.add(lblNewLabel_1);
 
 		btnLogin.addActionListener(e -> {

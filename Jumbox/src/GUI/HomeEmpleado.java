@@ -10,6 +10,7 @@ public class HomeEmpleado extends JFrame {
 	private Usuario empleadoLogueado;
 
 	public HomeEmpleado(Usuario empleado) {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(HomeEmpleado.class.getResource("/img/super.png")));
 		this.empleadoLogueado = empleado;
 
 		setTitle("Jumbox - Portal de Empleado: " + empleado.getUsername());
@@ -20,8 +21,8 @@ public class HomeEmpleado extends JFrame {
 		JPanel panel = new JPanel(new GridLayout(6, 1, 15, 15));
 		panel.setBorder(new EmptyBorder(30, 60, 30, 60));
 
-		JButton btnVerCatalogo = new JButton("Ver Catálogo de Productos");
-		JButton btnCrearPedido = new JButton("Crear un Nuevo Pedido");
+		JButton btnVerCatalogo = new JButton("Catálogo de Productos");
+		JButton btnCrearPedido = new JButton("Nuevo Pedido");
 		JButton btnVerMisPedidos = new JButton("Ver Mis Pedidos");
 		JButton btnGestionarProductos = new JButton("Gestionar Productos");
 		JButton btnVerUsuarios = new JButton("Ver Lista de Usuarios");
@@ -34,7 +35,7 @@ public class HomeEmpleado extends JFrame {
 		panel.add(btnVerUsuarios);
 		panel.add(btnCerrarSesion);
 
-		add(panel);
+		getContentPane().add(panel);
 
 		btnVerCatalogo.addActionListener(e -> {
 			new TablaProductosCliente(empleadoLogueado).setVisible(true);
