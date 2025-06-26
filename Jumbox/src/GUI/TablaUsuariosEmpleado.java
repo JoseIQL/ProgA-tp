@@ -16,7 +16,8 @@ public class TablaUsuariosEmpleado extends JFrame {
 	private TableRowSorter<DefaultTableModel> sorter;
 
 	public TablaUsuariosEmpleado(Usuario empleado) {
-		setTitle("Vista de Empleado - Logueado como: " + empleado.getUsername());
+		setIconImage(Toolkit.getDefaultToolkit().getImage(TablaUsuariosEmpleado.class.getResource("/img/super.png")));
+		setTitle("Lista de usuarios - Logueado como: " + empleado.getUsername());
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 800, 500);
 		setLocationRelativeTo(null);

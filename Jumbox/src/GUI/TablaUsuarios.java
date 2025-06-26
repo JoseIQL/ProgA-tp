@@ -18,6 +18,7 @@ public class TablaUsuarios extends JFrame {
 	private TableRowSorter<DefaultTableModel> sorter;
 
 	public TablaUsuarios(Usuario gerente) {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(TablaUsuarios.class.getResource("/img/super.png")));
 		this.gerenteLogueado = gerente;
 		setTitle("Gestión de Usuarios - Logueado como: " + gerente.getUsername());
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

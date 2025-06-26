@@ -13,7 +13,7 @@ public class HomeGerente extends JFrame {
 		setIconImage(Toolkit.getDefaultToolkit().getImage(HomeGerente.class.getResource("/img/super.png")));
 		this.gerenteLogueado = gerente;
 
-		setTitle("Jumbox - Panel de Gerente: " + gerente.getUsername());
+		setTitle("Jumbox - Home de Gerente: " + gerente.getUsername());
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(500, 450);
 		setLocationRelativeTo(null);
@@ -23,7 +23,7 @@ public class HomeGerente extends JFrame {
 
 		JButton btnVerCatalogo = new JButton("Catálogo de Productos");
 		JButton btnCrearPedido = new JButton("Nuevo Pedido");
-		JButton btnVerMisPedidos = new JButton("Ver Mis Pedidos");
+		JButton btnVerMisPedidos = new JButton("Mis Pedidos");
 		JButton btnGestionarProductos = new JButton("Gestionar Productos");
 		JButton btnGestionarUsuarios = new JButton("Gestionar Usuarios");
 		JButton btnCerrarSesion = new JButton("Cerrar Sesión");

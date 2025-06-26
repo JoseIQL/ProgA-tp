@@ -15,6 +15,7 @@ public class VistaGestionProductos extends JFrame {
 	private TableRowSorter<DefaultTableModel> sorter;
 
 	public VistaGestionProductos() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(VistaGestionProductos.class.getResource("/img/super.png")));
 		setTitle("Gestión de Catálogo de Productos");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setSize(800, 600);
@@ -25,6 +26,7 @@ public class VistaGestionProductos extends JFrame {
 		setContentPane(contentPane);
 
 		// Tabla productos
+		
 		model = new DefaultTableModel(new String[] { "ID", "Producto", "Categoría", "Precio", "Stock" }, 0) {
 			@Override
 			public boolean isCellEditable(int row, int column) {

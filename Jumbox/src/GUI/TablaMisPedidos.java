@@ -13,6 +13,7 @@ public class TablaMisPedidos extends JFrame {
 	private DefaultTableModel model;
 
 	public TablaMisPedidos(Usuario cliente) {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(TablaMisPedidos.class.getResource("/img/super.png")));
 		setTitle("Historial de Pedidos de: " + cliente.getUsername());
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setSize(800, 400);
@@ -22,7 +23,7 @@ public class TablaMisPedidos extends JFrame {
 		contentPane.setBorder(new EmptyBorder(10, 10, 10, 10));
 		setContentPane(contentPane);
 
-		model = new DefaultTableModel(new String[] { "ID Pedido", "Fecha", "Estado", "Productos en el Pedido" }, 0);
+		model = new DefaultTableModel(new String[] { "ID Pedido", "Fecha", "Estado", "Productos" }, 0);
 		JTable table = new JTable(model);
 
 		table.getColumnModel().getColumn(3).setPreferredWidth(350);

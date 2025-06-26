@@ -20,6 +20,7 @@ public class TablaProductosCliente extends JFrame {
 	private JButton btnLimpiar;
 
 	public TablaProductosCliente(Usuario cliente) {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(TablaProductosCliente.class.getResource("/img/super.png")));
 		setTitle("Catálogo de Productos - Bienvenido, " + cliente.getUsername());
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 800, 600);

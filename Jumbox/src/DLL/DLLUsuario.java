@@ -73,7 +73,19 @@ public class DLLUsuario {
 			stmt.setInt(1, idUsuario);
 			return stmt.executeUpdate() > 0;
 		} catch (SQLException e) {
-			JOptionPane.showMessageDialog(null, "Error al eliminar el usuario: " + e.getMessage());
+
+			// JOptionPane.showMessageDialog(null, "Error al eliminar el usuario: " +
+			// e.getMessage());
+			// return false;
+
+			if (e.getErrorCode() == 1451) {
+				JOptionPane.showMessageDialog(null, "Este usuario tiene pedidos asociados, no se puede eliminar.\n",
+					"Acción Bloqueada", JOptionPane.ERROR_MESSAGE);
+			} else {
+				JOptionPane.showMessageDialog(null, "Error al eliminar el usuario: " + e.getMessage(),
+						"Error de base de datos", JOptionPane.ERROR_MESSAGE);
+			}
+			e.printStackTrace();
 			return false;
 		}
 	}

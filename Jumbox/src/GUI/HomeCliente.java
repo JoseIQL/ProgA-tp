@@ -13,7 +13,7 @@ public class HomeCliente extends JFrame {
 		setIconImage(Toolkit.getDefaultToolkit().getImage(HomeCliente.class.getResource("/img/super.png")));
 		this.clienteLogueado = cliente;
 
-		setTitle("Jumbox - Portal de Cliente: " + cliente.getUsername());
+		setTitle("Jumbox - Home de Cliente: " + cliente.getUsername());
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(450, 350);
 		setLocationRelativeTo(null);
@@ -23,7 +23,7 @@ public class HomeCliente extends JFrame {
 
 		JButton btnVerInventario = new JButton("Catálogo de Productos");
 		JButton btnCrearPedido = new JButton("Nuevo Pedido");
-		JButton btnVerMisPedidos = new JButton("Ver Mis Pedidos");
+		JButton btnVerMisPedidos = new JButton("Mis Pedidos");
 		JButton btnCerrarSesion = new JButton("Cerrar Sesión");
 
 		panel.add(btnVerInventario);

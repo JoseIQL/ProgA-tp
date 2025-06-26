@@ -19,6 +19,7 @@ public class VistaCrearPedido extends JFrame {
 	private LinkedList<Integer> cantidadesPedido = new LinkedList<>();
 
 	public VistaCrearPedido(Usuario cliente) {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(VistaCrearPedido.class.getResource("/img/super.png")));
 		this.clienteLogueado = cliente;
 
 		setTitle("Crear Nuevo Pedido");
@@ -31,13 +32,14 @@ public class VistaCrearPedido extends JFrame {
 		setContentPane(contentPane);
 
 		JPanel inputPanel = new JPanel(new GridLayout(3, 2, 5, 5));
-		inputPanel.add(new JLabel("Nombre del Producto a Buscar:"));
+		inputPanel.add(new JLabel("Nombre del Producto:"));
 		nombreProductoField = new JTextField();
 		inputPanel.add(nombreProductoField);
 		inputPanel.add(new JLabel("Cantidad a añadir:"));
 		cantidadField = new JTextField();
 		inputPanel.add(cantidadField);
 		JButton btnAnadir = new JButton("Verificar y Añadir al Carrito");
+		btnAnadir.setFont(new Font("Tahoma", Font.BOLD, 14));
 		inputPanel.add(new JLabel());
 		inputPanel.add(btnAnadir);
 		contentPane.add(inputPanel, BorderLayout.NORTH);
